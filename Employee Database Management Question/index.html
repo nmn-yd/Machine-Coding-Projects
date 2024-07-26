@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<script defer type="text/javascript" src="./script.js"></script>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+			rel="stylesheet"
+		/>
+		<title>Employee Database Management</title>
+	</head>
+
+	<body>
+		<header class="header">
+			<div class="wrapper flex-center">
+				<a href="#" class="about-app">Employee Database Management</a>
+				<button class="btn add-btn add-employee">Add Employee</button>
+			</div>
+		</header>
+
+		<main>
+			<div class="wrapper">
+				<div class="box">
+					<div class="leftbox">
+						<h2 class="column-heading">Employee List</h2>
+						<ul class="secondary-navigation scrollable-content"></ul>
+					</div>
+					<div class="rightbox">
+						<h2 class="column-heading">Employee Information</h2>
+						<div class="employee-details scrollable-content"></div>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<div class="layer hidden"></div>
+
+		<div class="modal hidden">
+			<button class="btn btn-close">X</button>
+			<form class="form form-sbmt">
+				<div class="form-input">
+					<label for="name">Employee Name</label>
+					<input id="name" class="employeeName" type="text" name="name" />
+				</div>
+				<div class="form-input">
+					<label for="email">Email</label>
+					<input
+						id="email"
+						class="employeeEmail"
+						type="email"
+						name="Email"
+					/>
+				</div>
+				<div class="form-input">
+					<label for="phoneNumber">Phone No.</label>
+					<input
+						id="phoneNumber"
+						class="employeeNumber"
+						type="tel"
+						name="phoneNumber"
+					/>
+				</div>
+				<div class="form-input">
+					<label for="age">Age</label>
+					<input
+						type="number"
+						name="age"
+						id="age"
+						min="1"
+						max="110"
+						step="2"
+						class="employeeAge"
+					/>
+				</div>
+				<div class="form-input">
+					<label for="url">Enter Profile URL:</label>
+					<input
+						type="url"
+						name="url"
+						id="url"
+						class="employeeProfile"
+						placeholder="https://example.com"
+						pattern="https://.*"
+						required
+					/>
+				</div>
+
+				<button type="submit">Submit</button>
+				<button type="button">Submit</button>
+			</form>
+		</div>
+	</body>
+</html>
